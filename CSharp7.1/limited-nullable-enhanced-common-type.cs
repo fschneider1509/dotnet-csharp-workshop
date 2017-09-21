@@ -17,7 +17,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
             // *Non nullable value type T 
             // *null literal
 #if CSharp_71
-            int? result = compare ? 1 : null;
+            //int? result = compare ? 1 : null;
 #endif
 
             /*

@@ -24,10 +24,10 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 #if CSharp_71
             
             //Coming..//shallow equality checking
-            if (tuple1 == tuple2)
-            {
+            //if (tuple1 == tuple2)
+            //{
 
-            }
+            //}
 #endif
         }
     }

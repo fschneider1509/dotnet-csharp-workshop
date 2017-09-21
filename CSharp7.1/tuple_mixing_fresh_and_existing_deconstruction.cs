@@ -12,7 +12,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
         {
             int existingVar = 10;
 #if CSharp_71
-            (int newVar, existingVar) = (5, 2);
+            //(int newVar, existingVar) = (5, 2);
 #endif
         }
     }
