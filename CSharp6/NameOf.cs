@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6
 {
-    public class NameOf
+  public class NameOf
+  {
+    public void Process(string custId)
     {
-        public void Process(string customerId)
-        {
-            //No strings required.
-            //throw new ArgumentException("customerId");
-            throw new ArgumentException(nameof(customerId));
+      //No strings required.
+      //throw new ArgumentException("customerId");
+      throw new ArgumentException(nameof(custId));
 
-            //More specifically 
-            throw new ArgumentException("Order cannot be processed without a customer id", nameof(customerId));
-        }
+      //More specifically 
+      throw new ArgumentException($" {nameof(Process)} Order cannot be processed without a customer id: ", nameof(custId));
     }
+  }
 }

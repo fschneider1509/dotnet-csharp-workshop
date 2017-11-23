@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-    class discards_in_lambdas
+    internal class DiscardsInLambdas
     {
         public void Run()
         {
@@ -20,7 +20,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
             list.ForEach(_ => { counter++; });
 
             //Now multiple _ in lambdas meaning truly "I dont care"
-            //seems not in 7.1. as of 9/2017
+            //JK:seems not in 7.1. as of 9/2017
             //Func<int, int, int> zero = (_, _) => 0;
         }
     }

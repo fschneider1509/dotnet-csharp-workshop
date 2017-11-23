@@ -6,42 +6,47 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6
 {
-    class NullConditional
+  class NullConditional
+  {
+    public Action PurchaseCallBack { get; set; }
+
+    public void PurchaseProduct()
     {
-        public Action PurchaseCallBack { get; set; }
 
-        public void PurchaseProduct()
-        {
+      bool? result = null; // true, false, null
 
-            //Without null conditional
-            //Store purchase is done, notify caller
-            if (PurchaseCallBack != null)
-            {
-                //Notify the StoreManager we're done with purchase
-                //so it can update its UI
-                PurchaseCallBack();
-            }
+      int? value = 55;
+      int y = value ?? 20; // value == null ? 20 : value 
 
-            //With null conditional - call if its not null
-            PurchaseCallBack?.Invoke();
+      //Without null conditional
+      //Store purchase is done, notify caller
+      if (PurchaseCallBack != null)
+      {
+        //Notify the StoreManager we're done with purchase
+        //so it can update its UI
+        PurchaseCallBack();
+      }
 
-
-            string customerInfo = "Jane Doe";
-
-            //Length or null - storing to var
-            int? length = customerInfo?.Length;
+      //With null conditional - call if its not null
+      PurchaseCallBack?.Invoke();
 
 
-            //Direct use
-            if (customerInfo?.Length > 0)
-            {
-                Console.WriteLine($"Length:{customerInfo.Length}");
-            }
+      string customerInfo = "Jane Doe";
 
-            //**** Also see Program.Main() for switch ******
+      //Length or null - storing to var
+      int? length = customerInfo?.Length;
 
-            List<string> collection = null;
-            var item = collection?[0];
-        }
+
+      //Direct use
+      if (customerInfo?.Length > 0)
+      {
+        Console.WriteLine($"Length:{customerInfo.Length}");
+      }
+
+      //**** Also see Program.Main() for switch ******
+
+      List<string> collection = null;
+      var item = collection?[0];
     }
+  }
 }

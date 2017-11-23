@@ -9,7 +9,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo
 {
   internal class CallerInfo
   {
-    private static void Main() {
+    internal static void Entry() {
       Foo("");
       Console.ReadLine();
     }

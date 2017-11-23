@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-    class autoprop_non_fields
+    internal class AutopropNonFields
     {
         [Serializable]
         public class Foo

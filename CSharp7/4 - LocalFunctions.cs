@@ -27,6 +27,8 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
       //Note variables are available
       bool processed = false;
 
+      return Fib(x).current;
+
       (int current, int previous) Fib(int i)
       {
         Debug.WriteLine($"Processed:{processed}");
@@ -38,7 +40,6 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
         return (p + pp, p);
       }
       //Note this is a value on the tuple
-      return Fib(x).current;
 
     }
 
