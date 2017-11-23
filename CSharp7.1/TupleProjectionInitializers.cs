@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-    class tuple_projection_initializers
+    class TupleProjectionInitializers
     {
         internal class bip
         {

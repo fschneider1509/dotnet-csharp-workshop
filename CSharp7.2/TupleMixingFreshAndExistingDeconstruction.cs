@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 {
     class tuple_mixing_fresh_and_existing_deconstruction
     {

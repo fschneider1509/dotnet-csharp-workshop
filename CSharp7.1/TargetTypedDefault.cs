@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-  class target_typed_default
+  class TargetTypedDefault
   {
 
     const int yeOldeRedundant = default(int); // null

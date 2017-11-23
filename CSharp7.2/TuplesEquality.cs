@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 {
-  class tuples_equality
+  class TuplesEquality
   {
     public void Run()
     {
@@ -23,7 +23,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
       dynamic test = "";
       test.x = 0;
 
-#if CSharp_71
+#if CSharp72
 
       //Coming..//shallow equality checking
       //if (tuple1 == tuple2)

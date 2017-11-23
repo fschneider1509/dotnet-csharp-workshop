@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 {
-    class limited_nullable_enhanced_common_type
-    {
+    class LimitedNullableEnhancedCommonType
+  {
 
         public void Run()
         {
@@ -16,7 +16,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
             //Scenario - Figuring out the common type when between
             // *Non nullable value type T 
             // *null literal
-#if CSharp_71
+#if CSharp72
             //int? result = compare ? 1 : null;
 #endif
 

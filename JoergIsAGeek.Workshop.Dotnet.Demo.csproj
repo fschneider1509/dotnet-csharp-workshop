@@ -20,7 +20,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;CSharp_71</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CSharp71</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>7.1</LangVersion>
@@ -65,17 +65,17 @@
     <Compile Include="CSharp6\NameOf.cs" />
     <Compile Include="CSharp6\NullConditional.cs" />
     <Compile Include="CSharp6\UsingStatic.cs" />
-    <Compile Include="CSharp7.1\async-main.cs" />
-    <Compile Include="CSharp7.1\autoprop-non-fields.cs" />
-    <Compile Include="CSharp7.1\discards_in_lambdas.cs" />
-    <Compile Include="CSharp7.1\expression-variables-in-initializers.cs" />
+    <Compile Include="CSharp7.1\AsyncMain.cs" />
+    <Compile Include="CSharp7.1\AutopropNonFields.cs" />
+    <Compile Include="CSharp7.1\DiscardsInLambdas.cs" />
+    <Compile Include="CSharp7.2\ExpressionVariablesInInitializers.cs" />
     <Compile Include="CSharp7.1\GenericsPatternMatch.cs" />
-    <Compile Include="CSharp7.1\limited-nullable-enhanced-common-type.cs" />
-    <Compile Include="CSharp7.1\protected_and_internal.cs" />
-    <Compile Include="CSharp7.1\target-typed-default.cs" />
-    <Compile Include="CSharp7.1\tuple-projection-initializers.cs" />
-    <Compile Include="CSharp7.1\tuples-equality.cs" />
-    <Compile Include="CSharp7.1\tuple_mixing_fresh_and_existing_deconstruction.cs" />
+    <Compile Include="CSharp7.2\LimitedNullableEnhancedCommonType.cs" />
+    <Compile Include="CSharp7.1\ProtectedAndInternal.cs" />
+    <Compile Include="CSharp7.1\TargetTypedDefault.cs" />
+    <Compile Include="CSharp7.1\TupleProjectionInitializers.cs" />
+    <Compile Include="CSharp7.2\TuplesEquality.cs" />
+    <Compile Include="CSharp7.2\TupleMixingFreshAndExistingDeconstruction.cs" />
     <Compile Include="CSharp7\1 - DigitAndBinary.cs" />
     <Compile Include="CSharp7\3 - ExpressionBodied.cs" />
     <Compile Include="CSharp7\4 - LocalFunctions.cs" />

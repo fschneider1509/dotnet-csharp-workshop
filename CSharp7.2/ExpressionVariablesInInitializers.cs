@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 {
-    class expression_variables_in_initializers
-    {
+    class ExpressionVariablesInInitializers
+  {
         //TBD - Early yet
         /*
             We remove the restriction preventing the declaration of expression variables (out variable declarations and declaration patterns) in a ctor-initializer. Such a declared variable is in scope throughout the body of the constructor.

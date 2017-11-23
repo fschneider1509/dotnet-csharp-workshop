@@ -40,7 +40,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 
   class GenericsPatternMatch
   {
-#if CSharp_71
+#if CSharp71
     public class Packet
     {
     }
