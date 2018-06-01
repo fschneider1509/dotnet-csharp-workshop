@@ -20,7 +20,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;CSharp71</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;CSharp71;CSharp72;CSharp73</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>7.1</LangVersion>
@@ -70,12 +70,12 @@
     <Compile Include="CSharp7.1\DiscardsInLambdas.cs" />
     <Compile Include="CSharp7.2\ExpressionVariablesInInitializers.cs" />
     <Compile Include="CSharp7.1\GenericsPatternMatch.cs" />
-    <Compile Include="CSharp7.2\LimitedNullableEnhancedCommonType.cs" />
+    <Compile Include="CSharp8\LimitedNullableEnhancedCommonType.cs" />
     <Compile Include="CSharp7.1\ProtectedAndInternal.cs" />
     <Compile Include="CSharp7.1\TargetTypedDefault.cs" />
     <Compile Include="CSharp7.1\TupleProjectionInitializers.cs" />
-    <Compile Include="CSharp7.2\TuplesEquality.cs" />
-    <Compile Include="CSharp7.2\TupleMixingFreshAndExistingDeconstruction.cs" />
+    <Compile Include="CSharp8\TuplesEquality.cs" />
+    <Compile Include="CSharp8\TupleMixingFreshAndExistingDeconstruction.cs" />
     <Compile Include="CSharp7\1 - DigitAndBinary.cs" />
     <Compile Include="CSharp7\3 - ExpressionBodied.cs" />
     <Compile Include="CSharp7\4 - LocalFunctions.cs" />
@@ -93,7 +93,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CSharp7.3\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

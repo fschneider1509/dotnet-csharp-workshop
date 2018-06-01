@@ -16,8 +16,8 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
             //Scenario - Figuring out the common type when between
             // *Non nullable value type T 
             // *null literal
-#if CSharp72
-            //int? result = compare ? 1 : null;
+#if CSharp8
+            int? result = compare ? 1 : null;
 #endif
 
             /*
