@@ -1,206 +1,191 @@
 ﻿using JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6;
 using JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7;
+using JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1;
+using JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo
 {
   public class Program
   {
-    public class Person
-    {
-      public string Name { get; set; }
-    }
-
     static void Main(string[] args)
     {
-
-      //Review 1 Null Conditional
-      var nullConditional = new NullConditional();
-      nullConditional.PurchaseProduct();
-
-      //nifty was of checking argument length
-      switch (args?.Length)
+      Console.WriteLine("Demo Language (C# X) [5=C#5, 6=C#6, 7=C#7.0, 1=C#7.1, 2=C#7.2, 3=C#7.3");
+      var keyLang = Console.ReadKey();
+      Console.WriteLine("Demo Number (1-F)");
+      var keyNum = Console.ReadKey();
+      switch ($"{keyLang}.{keyNum.ToString().ToUpper()}")
       {
-        case 1:
-          //one arg passed in
+        case "5.1":
+          Console.WriteLine("Async Await");
           break;
-        case 2:
-          //you get the idea
+        case "5.2":
+          Console.WriteLine("Async Load");
+          break;
+        case "5.3":
+          Console.WriteLine("CallerInfo");
+          break;
+        case "6.1":
+          Console.WriteLine("Auto Props");
+          break;
+        case "6.2":
+          Console.WriteLine("Collection Initializer");
+          break;
+        case "6.3":
+          Console.WriteLine("Dictionaries");
+          break;
+        case "6.4":
+          Console.WriteLine("Exception Filter");
+          break;
+        case "6.5":
+          Console.WriteLine("ExpressionBodies");
+          var eb = new ExpressionBodies.Zombie("Some Name", 100);
+          Console.WriteLine($"Health = {eb.Health}; Name = {eb.Name}");
+          break;
+        case "6.6":
+          Console.WriteLine("Index Init");
+          break;
+        case "6.7":
+          Console.WriteLine("Interpolation");
+          //2 Interpolation
+          Interpolation.InterpolateDemo();
+          break;
+        case "6.8":
+          Console.WriteLine("NameOf");
+          break;
+        case "6.9":
+          Console.WriteLine("Null Conditional");
+          break;
+        case "6.10":
+          Console.WriteLine("Partial Interface");
+          //Review 1 Null Conditional
+          var nullConditional = new NullConditional();
+          nullConditional.PurchaseProduct();
+          break;
+        case "6.11":
+          Console.WriteLine("Using Static");
+          break;
+        case "7.0":
+          Console.WriteLine("DigitAndBinary");
+          //1. Binary Literal and digit separator
+          DigitAndBinary.Process();
+          break;
+        case "7.1":
+          Console.WriteLine("RefReturnAndOuts");
+          //2. Ref returns - pointer to a structure
+          var refReturns = new RefReturnsAndOuts();
+          refReturns.TestRefs();
+          break;
+        case "7.2":
+          Console.WriteLine("ExpressionBodied");
+          //3. Expression bodied accessors, constructors, destructor/finalizer
+          // C# 6 
+          var zombie = new CSharp6.ExpressionBodies.Zombie("Fred", 30);
+          Console.WriteLine(zombie.ToString());
+          break;
+        case "7.3":
+          Console.WriteLine("LocalFunction");
+          break;
+        case "7.4":
+          Console.WriteLine("Local Functions");
+          int[] numbers = { 3, 8, 7, 5, 2, 1, 9, 6, 4 };
+          LocalFunctions.QuickSort(numbers, 0, numbers.Length - 1);
+          Console.WriteLine("Sorted items");
+          numbers.ToList().ForEach(o => Console.WriteLine(o));
+          //Ex 2
+          LocalFunctions.Fibonacci(5);
+          break;
+        case "7.5":
+          OutVars.Process();
+          break;
+        case "7.6":
+          Console.WriteLine("PatternMatching");
+          //6. Pattern Matching
+          var pm = new PatternMatching();
+          pm.MatchSomething(new Circle(3.5d));
+          pm.MatchSomething(new Rectangle(2d, 4d));
+          //Int
+          pm.PrintStars(5);
+          //String
+          pm.PrintStars("5");
+          //Shape
+          pm.PrintStars(new Rectangle(3, 4));
+          break;
+        case "7.7":
+          Console.WriteLine("ThrowExpression");
+          try
+          {
+            Person p = new Person("");
+            p.Name = null; // throws an exception
+          }
+          catch (Exception)
+          {
+            Console.WriteLine("Exception thrown");
+          }
+          break;
+        case "7.8":
+          Console.WriteLine("Tupler");
+          var task = Tupler.ProcessPageRead();
+          task.Wait();
+          var result = task.Result;
+          Console.WriteLine($"{result.url} sent {result.data.Length} bytes");
+          break;
+        case "7.9":
+          Console.WriteLine("Deconstruct");
+          break;
+        case "7.A":
+          Console.WriteLine("GeneralizedAsyncReturn");
+          break;
+        // C# 7.1
+        case "1.1":
+          break;
+        case "1.2":
+          break;
+        case "1.3":
+          break;
+        case "1.4":
+          break;
+        case "1.5":
+          break;
+        case "1.6":
+          var tt = new TargetTypedDefault();
+          Console.WriteLine($"Ausgabe: {tt.DoSomething()}"); // 0
+          break;
+        case "1.7":
+          var tp = new TupleProjectionInitializers();
+          tp.Run();
+          break;
+        // C# 7.2
+        case "2.1":
+          Console.WriteLine("ExpressionVariablesInInit");
+          break;
+        case "2.2":
+          Console.WriteLine("MixedNamedArguments");
+          MixedNamedArguments.Execute();
+          break;
+        case "2.3":
+          Console.WriteLine("ReferenceSemanticsIn");
+          break;
+        // C# 7.3
+        case "3.3":
+          Console.WriteLine("Typles Equality");
           break;
       }
 
-
-      //2 Interpolation
-      Interpolation.InterpolateDemo();
-
-
-      //3 Null conditional
-      var nc = new NullConditional();
-      nc.PurchaseProduct();
-
-      //As you see fit...
-
-
-
-      //*****************************************************
-      //1. Binary Literal and digit separator
-      DigitAndBinary.Process();
-
-      //*****************************************************
-      //2. Ref returns - pointer to a structure
-      var refReturns = new RefReturnsAndOuts();
-      refReturns.TestRefs();
-
-      //*****************************************************
-      //3. Expression bodied accessors, constructors, destructor/finalizer
-      // C# 6 
-      var zombie = new CSharp6.ExpressionBodied6.Zombie("Fred", 30);
-      Console.WriteLine(zombie.ToString());
-
-      //3a. Note C#6 collection initialization
-      List<Order> orders = new List<Order>() { new Order(), new Order(), new Order() };
-      var processor = new OrderProcessor(orders);
-
-      //4
-      //Throw expressions - allow throw in expression bodied methods
-      //                        (these could be used all throughout api stubs, like reference assemblies for compilation)
-      //Also allows null coalescing (single line function calls)
-      try
-      {
-        var person = new CSharp7.Person(null);
-      }
-      catch (Exception ex)
-      {
-
-        Console.WriteLine($"Caught throw expression:{ex}");
-      }
-
-      //*****************************************************
-      //4. Local Functions
-      int[] numbers = { 3, 8, 7, 5, 2, 1, 9, 6, 4 };
-      LocalFunctions.QuickSort(numbers, 0, numbers.Length - 1);
-      Console.WriteLine("Sorted items");
-      numbers.ToList().ForEach(o => Console.WriteLine(o));
-
-      //Ex 2
-      LocalFunctions.Fibonacci(5);
-
-
-      //*****************************************************
-      //5. Out vars
-      OutVars.Process();
-
-      //*****************************************************
-      //6. Pattern Matching
-
-      var pm = new PatternMatching();
-      pm.MatchSomething(new Circle(3.5d));
-      pm.MatchSomething(new Rectangle(2d, 4d));
-
-
-      //Int
-      pm.PrintStars(5);
-
-      //String
-      pm.PrintStars("5");
-
-      //Shape
-      pm.PrintStars(new Rectangle(3, 4));
-
-
-      //*****************************************************
-      //8. Tuples
-
-      //Now a valuetuple - NO GC PRESSURE. Stack based!
-
-      //Lets check it out
-      //https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.6.2&term=ValueTuple
-      //https://docs.microsoft.com/en-us/dotnet/api/?view=netframework-4.5&term=System.Tuple
-
-
-
-      //Literals - note IL is optimized 
-      // [130 13 - 130 53]
-      // IL_01c3: ldc.i4.1
-      // IL_01c4: stloc.s a
-      // IL_01c6: ldc.i4.2
-      // IL_01c7: stloc.s b
-      var (a, b, c, c1, c2) = (1, 2, 3, 4, 5);
-
-      //We have variables now
-      var addThemUp = a + b + c;
-
-
-      //Tuple compatibility with System.Tuple
-      (var userName, var pass) = Tuple.Create("adam", "91281821JASJHDAHssh2#h4H#H@#Hh2h3H#H");
-
-      //Type inference - note right hand side intellisense
-      (float i, int j, int k) = (1, 2, 3);
-
-      //named
-      (int p, int q, int r) theTup = (2, 3, 4);
-
-      theTup = (5, 6, 7);
-      theTup.p = 8;
-
-      //adam
-      var adam = ("adam", "m", "tuliper");
-      //123-44-1234
-      (string firstName, string middleName, string lastName) cestMoi = adam;
-
-      //If we don't care about names
-
-      (string, string, string) stringTuple = default((string tup1, string tup2, string tup3));
-      stringTuple.Item1 = "Mary";
-
-      var task = Tupler.ProcessLanguage();
-      task.Wait();
-
-      var result = task.Result;
-
-      Console.WriteLine($"{result.keyPhrases}\r\n{result.sentiment}\r\n{result.language}");
-
-
-      //named type inference
-      var speedAndHealth = (health: 100, speed: 10);
-
-      //This isn't meant to be hungarian notation :)
-      (int id1, int id2, int id3) t = (2, 3, 4);
-      Console.WriteLine($"{t.id1} {t.id2} {t.id3}");
-
-
-      //can't convert dbl to float, and also a:1 - 'a' will be ignored
-      //(int a1, float b1, int c20) conversions = (a: 1, 2d, 3);
-
-      var item = (num: 1f, count: 2f, name: "hello", person: new Person() { Name = "Adam" });
-      item.Item1 = item.Item2 * item.Item1;
-
-      //Tuple.Create("item1", "item2", "item", "item", "item", "item", "item7", Tuple.Create("item 8"))
-      //     .Set(out var item1, out var item2, out var item3, out var item4, out var item5, out var item6, out var item7)
-      //     .Set(out var item8);
-
-
-
-      //7b. Deconstruction
-      var point = new Point(5, 4);
-      var (p1, p2) = point;
-
-      //overloaded deconstruction
-      var (x1, y1, q1) = point;
-
-      //Note can't have a single value deconstruction or tuple
-      //(int aqqqq) = (5);
-
-      //Deconstruction, I only want one item
-      (int a10, _, _, _, _) = (1, 2, 3, 4, 5);
-      var (x, _) = point;
-
-      //Equality - checks
+      Console.WriteLine();
+      Console.ReadLine();
+      ////nifty was of checking argument length
+      //switch (args?.Length)
+      //{
+      //  case 1:
+      //    //one arg passed in
+      //    break;
+      //  case 2:
+      //    //you get the idea
+      //    break;
+      //}
 
     }
   }

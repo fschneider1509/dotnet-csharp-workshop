@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JoergIsAGeek.Workshop.Dotnet.Demo", "JoergIsAGeek.Workshop.Dotnet.Demo.csproj", "{A4A6AE87-C8FC-462E-B6F8-A577220058FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoUnitTests", "..\DemoUnitTests\DemoUnitTests.csproj", "{B1BE6E10-D843-462B-8F6B-808E923A7CE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A4A6AE87-C8FC-462E-B6F8-A577220058FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4A6AE87-C8FC-462E-B6F8-A577220058FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4A6AE87-C8FC-462E-B6F8-A577220058FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BE6E10-D843-462B-8F6B-808E923A7CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BE6E10-D843-462B-8F6B-808E923A7CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BE6E10-D843-462B-8F6B-808E923A7CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BE6E10-D843-462B-8F6B-808E923A7CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

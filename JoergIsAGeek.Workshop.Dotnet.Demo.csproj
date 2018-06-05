@@ -23,7 +23,7 @@
     <DefineConstants>TRACE;DEBUG;CSharp71;CSharp72;CSharp73</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,31 +52,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSharp5\AsyncAwait.cs" />
-    <Compile Include="CSharp5\AsyncLoad.cs" />
-    <Compile Include="CSharp6\AutoProps.cs" />
-    <Compile Include="CSharp5\CallerInfo.cs" />
-    <Compile Include="CSharp6\Dictionaries.cs" />
-    <Compile Include="CSharp6\PartialInterface.cs" />
-    <Compile Include="CSharp6\CollectionInitialization.cs" />
-    <Compile Include="CSharp6\ExceptionFilters.cs" />
-    <Compile Include="CSharp6\ExpressionBodied6.cs" />
-    <Compile Include="CSharp6\IndexInitializer.cs" />
-    <Compile Include="CSharp6\Interpolation.cs" />
-    <Compile Include="CSharp6\NameOf.cs" />
-    <Compile Include="CSharp6\NullConditional.cs" />
-    <Compile Include="CSharp6\UsingStatic.cs" />
-    <Compile Include="CSharp7.1\AsyncMain.cs" />
-    <Compile Include="CSharp7.1\AutopropNonFields.cs" />
-    <Compile Include="CSharp7.1\DiscardsInLambdas.cs" />
-    <Compile Include="CSharp7.2\ExpressionVariablesInInitializers.cs" />
-    <Compile Include="CSharp7.1\GenericsPatternMatch.cs" />
-    <Compile Include="CSharp8\LimitedNullableEnhancedCommonType.cs" />
-    <Compile Include="CSharp7.1\ProtectedAndInternal.cs" />
-    <Compile Include="CSharp7.1\TargetTypedDefault.cs" />
-    <Compile Include="CSharp7.1\TupleProjectionInitializers.cs" />
-    <Compile Include="CSharp8\TuplesEquality.cs" />
-    <Compile Include="CSharp8\TupleMixingFreshAndExistingDeconstruction.cs" />
+    <Compile Include="CSharp5\1 - AsyncAwait.cs" />
+    <Compile Include="CSharp5\2 - AsyncLoad.cs" />
+    <Compile Include="CSharp4\Variances.cs" />
+    <Compile Include="CSharp6\1 - AutoProps.cs" />
+    <Compile Include="CSharp5\3 - CallerInfo.cs" />
+    <Compile Include="CSharp6\3 - Dictionaries.cs" />
+    <Compile Include="CSharp6\A - PartialInterface.cs" />
+    <Compile Include="CSharp6\2 - CollectionInitialization.cs" />
+    <Compile Include="CSharp6\4 - ExceptionFilters.cs" />
+    <Compile Include="CSharp6\5 - ExpressionBodies.cs" />
+    <Compile Include="CSharp6\6 - IndexInitializer.cs" />
+    <Compile Include="CSharp6\7 - Interpolation.cs" />
+    <Compile Include="CSharp6\8 - NameOf.cs" />
+    <Compile Include="CSharp6\9 - NullConditional.cs" />
+    <Compile Include="CSharp6\B - UsingStatic.cs" />
+    <Compile Include="CSharp7.1\1 - AsyncMain.cs" />
+    <Compile Include="CSharp7.1\2 - AutopropNonFields.cs" />
+    <Compile Include="CSharp7.1\3 - DiscardsInLambdas.cs" />
+    <Compile Include="CSharp7.2\1 - ExpressionVariablesInInitializers.cs" />
+    <Compile Include="CSharp7.1\4 - GenericsPatternMatch.cs" />
+    <Compile Include="CSharp7.2\2 - MixedNamedArguments.cs" />
+    <Compile Include="CSharp7.2\3 - ReferenceSemanticsIn.cs" />
+    <Compile Include="CSharp8\1 - LimitedNullableEnhancedCommonType.cs" />
+    <Compile Include="CSharp7.1\5 - ProtectedAndInternal.cs" />
+    <Compile Include="CSharp7.1\6 - TargetTypedDefault.cs" />
+    <Compile Include="CSharp7.1\7 - TupleProjectionInitializers.cs" />
+    <Compile Include="CSharp7.3\1 - TuplesEquality.cs" />
+    <Compile Include="CSharp8\2 - TupleMixingFreshAndExistingDeconstruction.cs" />
     <Compile Include="CSharp7\1 - DigitAndBinary.cs" />
     <Compile Include="CSharp7\3 - ExpressionBodied.cs" />
     <Compile Include="CSharp7\4 - LocalFunctions.cs" />
@@ -83,9 +87,9 @@
     <Compile Include="CSharp7\2 - RefReturnsAndOuts.cs" />
     <Compile Include="CSharp7\6 - PatternMatching.cs" />
     <Compile Include="CSharp7\7 - ThrowExpressions.cs" />
-    <Compile Include="CSharp7\8a - Tupler.cs" />
-    <Compile Include="CSharp7\8b - Deconstruct.cs" />
-    <Compile Include="CSharp7\9 - GeneralizedAsyncReturn.cs" />
+    <Compile Include="CSharp7\8 - Tupler.cs" />
+    <Compile Include="CSharp7\9 - Deconstruct.cs" />
+    <Compile Include="CSharp7\A - GeneralizedAsyncReturn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -93,9 +97,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CSharp7.3\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

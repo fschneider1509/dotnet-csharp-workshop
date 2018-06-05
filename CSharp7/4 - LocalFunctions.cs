@@ -10,16 +10,6 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
   public static class LocalFunctions
   {
 
-    // Lambdas create a delegate and execute it.
-    // Local functions are direct methods, less memory.
-    // Call locals before defined.
-    // Local functions are more efficient for the case when you want to write a function that is called only from the context of another method.
-    // Lambdas? Func, Action: ref, out, pointer, or params parameters aren't supported
-    //          Not valid generic, so Func<int, int> can't be used
-
-
-    //great discussion on 'cant we do something like this already'
-    //https://github.com/dotnet/roslyn/issues/259
     public static int Fibonacci(int x)
     {
       if (x < 0) throw new ArgumentException("Less negativity please!", nameof(x));
@@ -43,7 +33,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
 
     }
 
-    static public void QuickSort(int[] items, int left, int right)
+    public static void QuickSort(int[] items, int left, int right)
     {
       // For Recursion
       if (left < right)
@@ -82,7 +72,6 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
         }
       }
     }
-
 
 
     public static int LocalFunctionFactorial(int n)

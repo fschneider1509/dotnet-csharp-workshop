@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6
 {
-  class Interpolation
+  public class Interpolation
   {
     public static void InterpolateDemo()
     {

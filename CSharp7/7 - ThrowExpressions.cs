@@ -15,11 +15,9 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7
             set => _name = value ?? throw new ArgumentNullException();
         }
 
-        //Previously we didn't support throwing exceptions on expression bodied items.
+        // Ausnahmen auf Expression Body Members
         public Person(string name) => Name = name ?? throw new ArgumentNullException(name);
-
-
-
+    
         public string GetFirstName()
         {
             var parts = Name.Split(' ');

@@ -23,7 +23,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
       dynamic test = "";
       test.x = 0;
 
-#if CSharp8
+#if CSharp73
 
       //Coming..//shallow equality checking
       if (tuple1 == tuple2)

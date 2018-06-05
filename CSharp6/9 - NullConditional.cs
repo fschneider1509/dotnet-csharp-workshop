@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6
 {
-  class NullConditional
+  public class NullConditional
   {
     public Action PurchaseCallBack { get; set; }
 
@@ -42,9 +42,7 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp6
       {
         Console.WriteLine($"Length:{customerInfo.Length}");
       }
-
-      //**** Also see Program.Main() for switch ******
-
+      
       List<string> collection = null;
       var item = collection?[0];
     }
