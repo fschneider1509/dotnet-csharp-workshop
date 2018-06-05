@@ -4,24 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Animal
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-    //This is protected OR internal.
-    //It is still visible outside this assembly
-    protected internal class SuperSecretInternalBehavior
-        //C# 7.1
-        //private internal class InternalBehavior
-    {
-        public SuperSecretInternalBehavior()
-        {
-        }
-    }
-}
 
-public class Giraffe : Animal
-{
+  public class Animal
+  {
+    // visible within the whole assembly
+    protected internal class SuperSecretInternalBehavior
+    {
+      public SuperSecretInternalBehavior()
+      {
+      }
+    }
+  }
+
+  public class Giraffe : Animal
+  {
     public Giraffe()
     {
-        var behavior = new SuperSecretInternalBehavior();
+      // needs protected
+      var behavior = new SuperSecretInternalBehavior();
     }
+  }
+
+  public class SomeWhereElse
+  {
+    public SomeWhereElse()
+    {
+      // needs internal
+      var s = new Animal.SuperSecretInternalBehavior();
+    }
+  }
+
 }

@@ -6,15 +6,25 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 {
-    class ExpressionVariablesInInitializers
+  public class ExpressionVariablesInInitializers
   {
-        //TBD - Early yet
-        /*
-            We remove the restriction preventing the declaration of expression variables (out variable declarations and declaration patterns) in a ctor-initializer. Such a declared variable is in scope throughout the body of the constructor.
-
-            We remove the restriction preventing the declaration of expression variables (out variable declarations and declaration patterns) in a field or property initializer. Such a declared variable is in scope throughout the initializing expression.
-
-            We remove the restriction preventing the declaration of expression variables (out variable declarations and declaration patterns) in a query expression clause that is translated into the body of a lambda. Such a declared variable is in scope throughout that expression of the query clause.
-    */
+    public class A
+    {
+      public A(int i)
+      {
+      }
+      // field init
+      public static int Magic = int.TryParse("123", out var i) ? i : 0;
     }
+
+    public class B : A
+    {
+      // See base call with expression and var
+      public B(string s)
+          : base(int.TryParse(s, out var i) ? i : 0)
+      {
+        Console.WriteLine(i);
+      }
+    }
+  }
 }

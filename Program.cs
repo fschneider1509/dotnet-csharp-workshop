@@ -12,11 +12,35 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Demo Language (C# X) [5=C#5, 6=C#6, 7=C#7.0, 1=C#7.1, 2=C#7.2, 3=C#7.3");
-      var keyLang = Console.ReadKey();
-      Console.WriteLine("Demo Number (1-F)");
-      var keyNum = Console.ReadKey();
-      switch ($"{keyLang}.{keyNum.ToString().ToUpper()}")
+      (string p1, string p2, string keyLang, string keyNum) = (null, null, "", "");
+      switch (args?.Length)
+      {
+        case 1:
+          p1 = args[0];
+          break;
+        case 2:
+          p2 = args[1];
+          goto case 1;
+      }
+      if (!string.IsNullOrEmpty(p1))
+      {
+        Console.WriteLine("Demo Language (C# X) [5=C#5, 6=C#6, 7=C#7.0, 1=C#7.1, 2=C#7.2, 3=C#7.3");
+        keyLang = Console.ReadKey().KeyChar.ToString();
+      } else
+      {
+        keyLang = p1;
+      }
+      Console.WriteLine();
+      if (!string.IsNullOrEmpty(p2))
+      {
+        Console.WriteLine("Demo Number (1-F)");
+        keyNum = Console.ReadKey().KeyChar.ToString().ToUpper();
+      } else
+      {
+        keyNum = p2;
+      }
+      Console.WriteLine($"Call demo: {keyLang}.{keyNum}");
+      switch ($"{keyLang}.{keyNum}")
       {
         case "5.1":
           Console.WriteLine("Async Await");
@@ -144,6 +168,8 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo
         case "1.2":
           break;
         case "1.3":
+          var dil = new DiscardsInLambdas();
+          dil.Run();
           break;
         case "1.4":
           break;
@@ -170,22 +196,13 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo
           break;
         // C# 7.3
         case "3.3":
-          Console.WriteLine("Typles Equality");
+          Console.WriteLine("Tuples Equality");
           break;
       }
 
       Console.WriteLine();
       Console.ReadLine();
-      ////nifty was of checking argument length
-      //switch (args?.Length)
-      //{
-      //  case 1:
-      //    //one arg passed in
-      //    break;
-      //  case 2:
-      //    //you get the idea
-      //    break;
-      //}
+
 
     }
   }

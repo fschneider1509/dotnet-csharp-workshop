@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._1
 {
-  class AsyncMain
+  public class AsyncMain
   {
 #if CSharp71
 
-    static Task Main() => null;
+    public static Task Main() => null;
 
     //static Task<int> Main() => null;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
+namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._3
 {
   class TuplesEquality
   {
@@ -25,10 +25,10 @@ namespace JoergIsAGeek.Workshop.Dotnet.Demo.CSharp7._2
 
 #if CSharp73
 
-      //Coming..//shallow equality checking
+      // shallow equality
       if (tuple1 == tuple2)
       {
-          
+        Console.WriteLine("Equals");
       }
 #endif
     }
